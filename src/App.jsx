@@ -10,7 +10,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://product-server-eight.vercel.app/")
+      .get("https://product-server-phi.vercel.app/")
       .then((response) => {
         setProducts(response.data);
         console.log(response);
