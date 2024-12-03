@@ -10,7 +10,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://product-server-zeta.vercel.app/?vercelToolbarCode=2Shp7H2qGfDxWJW")
+      .get("https://product-server-eight.vercel.app/")
       .then((response) => {
         setProducts(response.data);
         console.log(response);
