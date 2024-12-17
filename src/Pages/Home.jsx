@@ -5,14 +5,14 @@ import Header from "./Header";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-
+  const apiURL = import.meta.env.VITE_PRODUCTS_API; 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products") // Make sure this is the correct endpoint
+      .get(`${apiURL}/products`) 
       .then((response) => {
         console.log("API Response Data:", response.data);
         if (Array.isArray(response.data)) {
-          setProducts(response.data); // Set products only if the response is an array
+          setProducts(response.data);  
         } else {
           console.error("Expected an array but got:", response.data);
         }

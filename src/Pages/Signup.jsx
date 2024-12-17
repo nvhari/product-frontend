@@ -20,7 +20,7 @@ const Signup = () => {
       const data = await res.json();
       if (res.ok && data.success) {
         setSuccess("Account created successfully! Redirecting to login...");
-        setTimeout(() => navigate("/login"), 2000);
+        setTimeout(() => navigate("/login"));
       } else {
         setError(data.message || "Failed to create account. Try again.");
       }

@@ -15,7 +15,7 @@ const Login = ({ setAuthenticated }) => {
     e.preventDefault();
     setError(""); // Clear any previous errors
 
-    const apiURL = import.meta.env.VITE_PRODUCTS_API; // Get API base URL from environment variables
+    const apiURL = import.meta.env.VITE_PRODUCTS_API;  
 
     try {
       const res = await fetch(`${apiURL}/login`, {
