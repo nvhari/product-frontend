@@ -14,33 +14,36 @@ const Login = ({ setAuthenticated }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError(""); // Clear any previous errors
-
+  
     const apiURL = import.meta.env.VITE_PRODUCTS_API;  
-
+  
     try {
       const res = await fetch(`${apiURL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-
+  
       const data = await res.json();
-
+      console.log("Login response:", data); // Check the response structure
+  
       if (res.ok) {
         if (data.success) {
           setAuthenticated(true); // Update authentication state
-          navigate("/home"); // Redirect to products page
+          console.log("Login successful, navigating to /home...");
+          navigate("/home"); // Redirect to home page
         } else {
-          setError(data.message || "Invalid email or password."); // Handle backend error message
+          setError(data.message || "Invalid email or password.");
         }
       } else {
         setError(data.message || "Login failed. Please try again.");
       }
     } catch (err) {
-      setError("Failed to log in. Please check your connection and try again."); // Handle network errors
+      console.error("Error during login:", err);
+      setError("Failed to log in. Please check your connection and try again.");
     }
   };
-
+  
   return (
     <div className="container">
       <div className="form-card">
