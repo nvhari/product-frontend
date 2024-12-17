@@ -88,7 +88,7 @@ main .product-item .info .flex span {
 }
 
 .App-header {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 20px;
   font-size: 24px;
@@ -120,3 +120,138 @@ main .product-item .info .flex span {
   border-radius: 8px;
 }
 
+.login-page,
+.signup-page,
+.products-page {
+  text-align: center;
+  padding: 20px;
+}
+/* Product Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: left;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+.product-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+.product-card p.price {
+  font-weight: bold;
+  color: #007bff;
+}
+/* Logout Button */
+.logout-button {
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.logout-button:hover {
+  background-color: #e63946;
+}
+/* Form Card */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.form-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+.button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #0056b3;
+}
+.link {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+/* Error and Success Messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+a {
+  text-decoration: none;
+}
